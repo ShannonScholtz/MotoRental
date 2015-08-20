@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import za.ac.cput.MotoRental.Services.MotorCycleService;
-import za.ac.cput.MotoRental.config.factory.EngineTypeEmbeddableFactory;
-import za.ac.cput.MotoRental.config.factory.MotorBikeCondtionFactory;
 import za.ac.cput.MotoRental.domain.MotorCycle;
 import za.ac.cput.MotoRental.domain.Rental;
 import za.ac.cput.MotoRental.module.MotorCycleResources;
@@ -46,7 +44,7 @@ public class MotorCyclePage {
                     .Make(m.getMake())
                     .Model(m.getModel())
                     .year(m.getYear())
-                    .motorBikeCondition(m.getMotorBikeCondition())
+                    .motorBikeCondition(m.getMotorBikeConditionEmbeddable())
                     .engineTypeEmbeddable(m.getEngineTypeEmbeddable())
                     .rentals(m.getRentals())
                     .build();

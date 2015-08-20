@@ -1,14 +1,14 @@
 package za.ac.cput.MotoRental.config.factory;
 
-import za.ac.cput.MotoRental.domain.MotorBikeCondition;
+import za.ac.cput.MotoRental.domain.MotorBikeConditionEmbeddable;
 
 /**
  * Created by student on 2015/08/19.
  */
 public class MotorBikeCondtionFactory {
-    public static MotorBikeCondition createAddress(String OdometreReading, String Gas, String BikeCondition)
+    public static MotorBikeConditionEmbeddable createAddress(String OdometreReading, String Gas, String BikeCondition)
     {
-        MotorBikeCondition addressEmbeddable = new MotorBikeCondition
+        MotorBikeConditionEmbeddable addressEmbeddable = new MotorBikeConditionEmbeddable
                 .Builder(OdometreReading)
                 .Gas(Gas)
                 .BikeCondition(BikeCondition)

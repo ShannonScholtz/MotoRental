@@ -2,7 +2,7 @@ package za.ac.cput.MotoRental.module;
 
 import org.springframework.hateoas.ResourceSupport;
 import za.ac.cput.MotoRental.domain.EngineTypeEmbeddable;
-import za.ac.cput.MotoRental.domain.MotorBikeCondition;
+import za.ac.cput.MotoRental.domain.MotorBikeConditionEmbeddable;
 import za.ac.cput.MotoRental.domain.Rental;
 
 import java.util.List;
@@ -17,7 +17,7 @@ public class MotorCycleResources extends ResourceSupport {
     private String Make;
     private String Model;
     private String year;
-    private MotorBikeCondition motorBikeCondition;
+    private MotorBikeConditionEmbeddable motorBikeConditionEmbeddable;
     private EngineTypeEmbeddable engineTypeEmbeddable;
     private List<Rental> rentals;
 
@@ -31,7 +31,7 @@ public class MotorCycleResources extends ResourceSupport {
         this.Make = builder.Make;
         this.Model = builder.Model;
         this.year = builder.year;
-        this.motorBikeCondition = builder.motorBikeCondition;
+        this.motorBikeConditionEmbeddable = builder.motorBikeConditionEmbeddable;
         this.engineTypeEmbeddable = builder.engineTypeEmbeddable;
         this.rentals = builder.rentals;
     }
@@ -56,8 +56,8 @@ public class MotorCycleResources extends ResourceSupport {
         return year;
     }
 
-    public MotorBikeCondition getMotorBikeCondition() {
-        return motorBikeCondition;
+    public MotorBikeConditionEmbeddable getMotorBikeConditionEmbeddable() {
+        return motorBikeConditionEmbeddable;
     }
 
     public EngineTypeEmbeddable getEngineTypeEmbeddable() {
@@ -75,7 +75,7 @@ public class MotorCycleResources extends ResourceSupport {
         private String Make;
         private String Model;
         private String year;
-        private MotorBikeCondition motorBikeCondition;
+        private MotorBikeConditionEmbeddable motorBikeConditionEmbeddable;
         // private MotorCycleStatusEmbeddable motorCycleStatusEmbeddable;
         private EngineTypeEmbeddable engineTypeEmbeddable;
         private List<Rental> rentals;
@@ -99,8 +99,8 @@ public class MotorCycleResources extends ResourceSupport {
             return this;
         }
 
-        public Builder motorBikeCondition(MotorBikeCondition motorBikeCondition) {
-            this.motorBikeCondition = motorBikeCondition;
+        public Builder motorBikeCondition(MotorBikeConditionEmbeddable motorBikeConditionEmbeddable) {
+            this.motorBikeConditionEmbeddable = motorBikeConditionEmbeddable;
             return this;
         }
 
@@ -120,7 +120,7 @@ public class MotorCycleResources extends ResourceSupport {
             this.Make = motorCycle.Make;
             this.Model = motorCycle.Model;
             this.year = motorCycle.year;
-            this.motorBikeCondition = motorCycle.motorBikeCondition;
+            this.motorBikeConditionEmbeddable = motorCycle.motorBikeConditionEmbeddable;
             this.engineTypeEmbeddable = motorCycle.engineTypeEmbeddable;
             this.rentals = motorCycle.rentals;
             return this;
